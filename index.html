@@ -73,6 +73,13 @@
         html[data-lang="en"] .block-en { display: block; }
         .block-en { display: none; }
         .block-sk { display: block; }
+        /* Touch devices: disable stuck hover, use JS click-toggle instead */
+        @media (hover: none) {
+            .group:hover .group-hover\:opacity-0 { opacity: 1 !important; }
+            .group:hover .group-hover\:opacity-100 { opacity: 0 !important; }
+        }
+        .group.flipped > div img:first-child { opacity: 0 !important; }
+        .group.flipped > div img:last-child  { opacity: 1 !important; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -382,6 +389,12 @@
     function closeMobileMenu() {
         mobileMenu.classList.add('hidden');
     }
+
+    // Toggle funny photo on tap (mobile fix)
+    document.querySelectorAll('#clenovia .group').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => card.classList.toggle('flipped'));
+    });
 </script>
 
 </body>

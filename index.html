@@ -80,7 +80,7 @@
         }
         .group.flipped > div img:first-child { opacity: 0 !important; }
         .group.flipped > div img:last-child  { opacity: 1 !important; }
-        #poster-lightbox.active, #poster-lightbox-2.active { display: flex !important; }
+        #poster-lightbox-2.active { display: flex !important; }
     </style>
 </head>
 <body class="min-h-screen flex flex-col">
@@ -300,9 +300,6 @@
             <span><span class="lang-sk">Pripravujeme</span><span class="lang-en">Coming soon</span></span>
             <span class="font-label not-italic text-base tracking-[0.2em] uppercase text-on-primary-fixed/60">December 2026</span>
         </h2>
-        <img src="pictures/kolko-stoja-bondove-hodinky.png" alt="Koľko stoja Bondove hodinky"
-             class="w-1/2 block mx-auto rounded-sm mb-6 hover:opacity-90 transition-opacity"
-             style="cursor:zoom-in" onclick="document.getElementById('poster-lightbox').classList.add('active')">
         <img src="pictures/kolko-stoja-bondove-hodinky-2.png" alt="Koľko stoja Bondove hodinky 2"
              class="w-1/2 block mx-auto rounded-sm mb-10 hover:opacity-90 transition-opacity"
              style="cursor:zoom-in" onclick="document.getElementById('poster-lightbox-2').classList.add('active')">
@@ -435,9 +432,6 @@
 
 <div id="poster-lightbox-2" onclick="this.classList.remove('active')" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;cursor:zoom-out;align-items:center;justify-content:center">
     <img src="pictures/kolko-stoja-bondove-hodinky-2.png" alt="Koľko stoja Bondove hodinky 2" style="max-width:92vw;max-height:92vh;object-fit:contain">
-</div>
-<div id="poster-lightbox" onclick="this.classList.remove('active')" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;cursor:zoom-out;align-items:center;justify-content:center">
-    <img src="pictures/kolko-stoja-bondove-hodinky.png" alt="Koľko stoja Bondove hodinky" style="max-width:92vw;max-height:92vh;object-fit:contain">
 </div>
 </body>
 </html>
